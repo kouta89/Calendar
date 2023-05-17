@@ -46,19 +46,25 @@ public class Main{
 				
 				//日付が一桁の場合空白を3つ、二桁の場合空白を2つ用意
 				if(days < 10) {
-					if(i%7 == 1) {
+					if(days == date){
+						System.out.printf("   " + colors[3] + days + end);
+					}else if(i%7 == 1) {
 						System.out.printf("   " + colors[0] + days + end);
 					}else if(i%7 == 0){
 						System.out.printf("   " + colors[1] + days + end);
-					}else {
+					}
+					else {
 						System.out.printf("   " + days);
 					}
 				}else {
-					if((i%7) == 1) {
+					if(days == date){
+						System.out.printf("  " + colors[3] + days + end);
+					}else if((i%7) == 1) {
 						System.out.printf("  " + colors[0] + days + end);
 					}else if((i%7) == 0){
 						System.out.printf("  " + colors[1] + days + end);
-					}else {
+					}
+					else {
 						System.out.printf("  " + days);
 					}
 				}
